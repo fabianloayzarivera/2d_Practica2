@@ -145,13 +145,13 @@ int main() {
 		if (enlarge) {
 			widthFireF  += (widthFireForignal * 0.5f * deltaTime);
 			heightFireF += (heightFireForiginal * 0.5f * deltaTime);
-			if ((widthFireF * heightFireF) >= ((widthFireForignal * heightFireForiginal) * 1.2f))
+			if ((widthFireF * heightFireF) >= ((widthFireForignal * heightFireForiginal) * (1.2f * 1.2f))) //I am comparing area so it will be to a ratio of 1.44 instead of 1.2
 				enlarge = false;
 		}
 		else {
 			widthFireF  -= (widthFireForignal * 0.5f * deltaTime);
 			heightFireF -= (heightFireForiginal * 0.5f * deltaTime);
-			if ((widthFireF * heightFireF) <= ((widthFireForignal * heightFireForiginal) * 0.8f))
+			if ((widthFireF * heightFireF) <= ((widthFireForignal * heightFireForiginal) * (0.8f * 0.8f)))
 				enlarge = true;
 		}
 
