@@ -60,15 +60,10 @@ float Vec2::lenght() {
 Vec2 Vec2::norm() {
 	Vec2 ret;
 	float len = this->lenght();
-	if (len != 0) {
-		ret.x = x / len;
-		ret.y = y / len;
-		return ret;
-	}
-	else {
-		*this;
-	}
-	
+	ret.x = x / len;
+	ret.y = y / len;
+
+	return ret;
 }
 
 float Vec2::dot(const Vec2 &other){
